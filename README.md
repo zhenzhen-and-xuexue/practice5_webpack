@@ -19,13 +19,13 @@ WebPack可以看做是模块打包机：它做的事情是，分析你的项目�
 ### 1.打包js
 js是webpack原生支持的模块，只要按照规定的写法，就能轻松实现模块化<br />
 如下面是要用Jquery的html()方法往div#root里面写一句话，按照面向对象的思想，这句话需要由一个类提供<br />
-![20](https://raw.githubusercontent.com/wiki/sodyxiezhen/practice3_less/30.png)
+![20](https://raw.githubusercontent.com/wiki/sodyxiezhen/practice3_less/30.png)<br />
 引入模块，import ,require均可<br />
-![20](https://raw.githubusercontent.com/wiki/sodyxiezhen/practice3_less/31.png)
+![20](https://raw.githubusercontent.com/wiki/sodyxiezhen/practice3_less/31.png)<br />
 模块自身的写法 export 
-![20](https://raw.githubusercontent.com/wiki/sodyxiezhen/practice3_less/32.png)
+![20](https://raw.githubusercontent.com/wiki/sodyxiezhen/practice3_less/32.png)<br />
 最后打包成bundle.js就可以轻松实现啦
-![20](https://raw.githubusercontent.com/wiki/sodyxiezhen/practice3_less/33.png)
+![20](https://raw.githubusercontent.com/wiki/sodyxiezhen/practice3_less/33.png)<br />
 
 ### 项目运行步骤
 1. 把仓库克隆到本地<br />
@@ -38,3 +38,6 @@ js是webpack原生支持的模块，只要按照规定的写法，就能轻松�
 	npm run server 
 5. 预览查看<br />
 	浏览器栏输入 http://localhost:1717
+
+### 练习
+- 思考webpack工作方式，webpack.config.js的配置，自己动手打包一个js文件
