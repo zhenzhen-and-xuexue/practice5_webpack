@@ -19,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/zhenzhen-and-xuexue/practice5_webpack/issues"
   },
-  "homepage": "https://github.com/zhenzhen-and-xuexue/practice5_webpack#readme"
+  "homepage": "https://github.com/zhenzhen-and-xuexue/practice5_webpack#readme",
+  "devDependencies": {
+    "webpack": "^3.11.0"
+  }
 }
