@@ -1,0 +1,23 @@
+{
+  "name": "practice5_webpack",
+  "version": "1.0.0",
+  "description": "webpack learn",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zhenzhen-and-xuexue/practice5_webpack.git"
+  },
+  "keywords": [
+    "webpack",
+    "learn"
+  ],
+  "author": "sody xuexue",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zhenzhen-and-xuexue/practice5_webpack/issues"
+  },
+  "homepage": "https://github.com/zhenzhen-and-xuexue/practice5_webpack#readme"
+}
