@@ -1,10 +1,13 @@
 const path = require('path');
 const webpack = require('webpack');
 module.exports = {
-  entry:  __dirname + "/src/main.js",//已多次提及的唯一入口文件
+  entry:  {
+  	entry: __dirname + "/src/main.js",//第一节，打包简单js的入口文件
+  	entry2: __dirname + "/src/main2.js"//第二节，打包css的入口文件
+  },//已多次提及的唯一入口文件
   output: {
     path: __dirname + "/dist",//打包后的文件存放的地方
-    filename: "bundle.js"//打包后输出文件的文件名
+    filename: "bundle-[name].js"//打包后输出文件的文件名
   },
 	devServer:{
 	    //设置基本目录结构
@@ -19,5 +22,11 @@ module.exports = {
 	    inline: true
 	},
 	module:{
+		rules: [
+            {
+              test: /\.css$/,
+              use: [ 'style-loader', 'css-loader' ]
+            }
+        ]
 	}
 }

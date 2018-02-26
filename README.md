@@ -27,6 +27,20 @@ js是webpack原生支持的模块，只要按照规定的写法，就能轻松�
 最后打包成bundle.js就可以轻松实现啦
 ![20](https://raw.githubusercontent.com/wiki/sodyxiezhen/practice3_less/33.png)<br />
 
+### 2.打包css
+css也可以作为模块被打包进去，这个就需要引入合适的Loader啦。Loader是webpack为了加载非js这种原生支持的文件，弄的一个加载机制，css,less,image只要通过合适的loader都可以被打包进来，你可以理解为加载适配器<br />
+加载css需要 **style-loader** 和 **css-loader**两个<br />
+1. 安装style-loader css-loader<br />
+![20](https://raw.githubusercontent.com/wiki/sodyxiezhen/practice3_less/40.png)<br />
+2. 配置webpack.config.js<br />
+![20](https://raw.githubusercontent.com/wiki/sodyxiezhen/practice3_less/41.png)<br />
+这样我们就可以愉快滴玩耍啦<br />
+main2.js文件里面引入css文件，当做一个模块<br />
+![20](https://raw.githubusercontent.com/wiki/sodyxiezhen/practice3_less/42.png)
+![20](https://raw.githubusercontent.com/wiki/sodyxiezhen/practice3_less/43.png)<br />
+效果和以前单独引入css一样滴~<br />
+![20](https://raw.githubusercontent.com/wiki/sodyxiezhen/practice3_less/44.png)<br />
+
 ### 项目运行步骤
 1. 把仓库克隆到本地<br />
 	git clone https://github.com/zhenzhen-and-xuexue/practice5_webpack.git
@@ -40,4 +54,5 @@ js是webpack原生支持的模块，只要按照规定的写法，就能轻松�
 	浏览器栏输入 http://localhost:1717
 
 ### 练习
-- 思考webpack工作方式，webpack.config.js的配置，自己动手打包一个js文件
+- 思考webpack工作方式，webpack.config.js的配置，自己动手打包一个js文件 20180224
+- 学会模仿使用loader，打包css文件 20180226(不需要死记硬背，因为以后使用基本一样，保存起来，以后使用copy过来即可)

@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "build": "webpack --colors --progress",
-    "start": "webpack-dev-server"
+    "start": "webpack-dev-server --open",
+    "server": "webpack-dev-server --open"
   },
   "repository": {
     "type": "git",
@@ -22,6 +23,8 @@
   },
   "homepage": "https://github.com/zhenzhen-and-xuexue/practice5_webpack#readme",
   "devDependencies": {
+    "css-loader": "^0.28.10",
+    "style-loader": "^0.20.2",
     "webpack": "^3.11.0",
     "webpack-dev-server": "^2.11.1"
   },
