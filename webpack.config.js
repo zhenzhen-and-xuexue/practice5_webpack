@@ -1,6 +1,8 @@
 const path = require('path');
 const webpack = require('webpack');
+const extractTextPlugin = require("extract-text-webpack-plugin");
 module.exports = {
+	devtool: 'eval-source-map',
   entry:  {
   	entry: __dirname + "/src/main.js",//第一节，打包简单js的入口文件
   	entry2: __dirname + "/src/main2.js"//第二节，打包css的入口文件
@@ -23,10 +25,22 @@ module.exports = {
 	},
 	module:{
 		rules: [
+			//css文件的打包
+            // {
+            //   test: /\.css$/,
+            //   use: [ 'style-loader', 'css-loader' ]
+            // }
+            // css文件的打包和分离，用到了 extrace-text
             {
-              test: /\.css$/,
-              use: [ 'style-loader', 'css-loader' ]
-            }
+		        test: /\.css$/,
+		        use: extractTextPlugin.extract({
+		          fallback: "style-loader",
+		          use: "css-loader"
+		        })
+		    }
         ]
-	}
+	},
+	plugins:[
+		new extractTextPlugin("styles.css")
+	]
 }
