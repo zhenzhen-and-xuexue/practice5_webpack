@@ -41,6 +41,16 @@ main2.js文件里面引入css文件，当做一个模块<br />
 效果和以前单独引入css一样滴~<br />
 ![20](https://raw.githubusercontent.com/wiki/sodyxiezhen/practice3_less/44.png)<br />
 
+### 3.分离css
+有些简单的交互页面中，你的JavasScript页面代码会非常少，而大部分代码都在CSS中，这时候项目组长会要求把CSS单独提取出来，方便以后更改。遇到这个需求你不要惊慌，已经有大神为我们准备好了对象的插件（plugin）<br />
+plugin是webpack的另外一个概念，如果说loader是模块加载器的话，plugin就是在模块功能功能之外的补充
+1. 安装 **extract-text-webpack-plugin** <br />
+![20](https://raw.githubusercontent.com/wiki/sodyxiezhen/practice3_less/52.png)<br />
+2. 配置webpack.config.js
+![20](https://raw.githubusercontent.com/wiki/sodyxiezhen/practice3_less/51.png)<br />
+这样所有css就抽离到style.css中间啦<br />
+![20](https://raw.githubusercontent.com/wiki/sodyxiezhen/practice3_less/53.png)<br />
+
 ### 项目运行步骤
 1. 把仓库克隆到本地<br />
 	git clone https://github.com/zhenzhen-and-xuexue/practice5_webpack.git
@@ -56,3 +66,4 @@ main2.js文件里面引入css文件，当做一个模块<br />
 ### 练习
 - 思考webpack工作方式，webpack.config.js的配置，自己动手打包一个js文件 20180224
 - 学会模仿使用loader，打包css文件 20180226(不需要死记硬背，因为以后使用基本一样，保存起来，以后使用copy过来即可)
+- 学会使用plugin,抽离css文件 20180227(以后我们使用webpack，就是去网上找各种loader和plugin)
