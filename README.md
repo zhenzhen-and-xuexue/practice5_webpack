@@ -51,6 +51,16 @@ plugin是webpack的另外一个概念，如果说loader是模块加载器的话�
 这样所有css就抽离到style.css中间啦<br />
 ![20](https://raw.githubusercontent.com/wiki/sodyxiezhen/practice3_less/53.png)<br />
 
+### 4.css中图片的打包
+图片也可以作为一种模块打包进来，一看这个你就知道有新的loader啦<br />
+1. 安装 **style-loader** **file-loader** <br />
+![20](https://raw.githubusercontent.com/wiki/sodyxiezhen/practice3_less/61.png)<br />
+2. 配置webpack.config.js
+![20](https://raw.githubusercontent.com/wiki/sodyxiezhen/practice3_less/62.png)<br />
+这样webpack打包css文件发现图片就会分析出图片的存放路径，帮我们把图片路径处理对啦<br />
+![20](https://raw.githubusercontent.com/wiki/sodyxiezhen/practice3_less/63.png)<br />
+![20](https://raw.githubusercontent.com/wiki/sodyxiezhen/practice3_less/64.png)<br />
+
 ### 项目运行步骤
 1. 把仓库克隆到本地<br />
 	git clone https://github.com/zhenzhen-and-xuexue/practice5_webpack.git

@@ -4,8 +4,9 @@ const extractTextPlugin = require("extract-text-webpack-plugin");
 module.exports = {
 	devtool: 'eval-source-map',
   entry:  {
-  	entry: __dirname + "/src/main.js",//第一节，打包简单js的入口文件
-  	entry2: __dirname + "/src/main2.js"//第二节，打包css的入口文件
+  	// entry: __dirname + "/src/main.js",//第一节，打包简单js的入口文件
+  	// entry2: __dirname + "/src/main2.js",//第二节，打包css的入口文件
+  	entry3: __dirname + "/src/main3.js"//第三节，打包css里面的图片
   },//已多次提及的唯一入口文件
   output: {
     path: __dirname + "/dist",//打包后的文件存放的地方
@@ -37,7 +38,19 @@ module.exports = {
 		          fallback: "style-loader",
 		          use: "css-loader"
 		        })
-		    }
+		    },
+		    //图片文件的打包
+		    {
+               test:/\.(png|jpg|gif)/ ,
+               use:[{
+                   loader:'url-loader',
+                   options:{
+                       limit:5000,
+                       outputPath:'images/',
+                       name:'[name].[ext]'
+                   }
+               }]
+            }
         ]
 	},
 	plugins:[
