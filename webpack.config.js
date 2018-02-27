@@ -1,16 +1,21 @@
 const path = require('path');
 const webpack = require('webpack');
 const extractTextPlugin = require("extract-text-webpack-plugin");
+var website = {
+	publicPath: '/dist/'
+};
 module.exports = {
 	devtool: 'eval-source-map',
   entry:  {
   	// entry: __dirname + "/src/main.js",//第一节，打包简单js的入口文件
   	// entry2: __dirname + "/src/main2.js",//第二节，打包css的入口文件
-  	entry3: __dirname + "/src/main3.js"//第三节，打包css里面的图片
+  	entry3: __dirname + "/src/main3.js",//第三节，打包css里面的图片
+  	entry4: __dirname + "/src/main4.js"//第三节，打包css里面的图片
   },//已多次提及的唯一入口文件
   output: {
     path: __dirname + "/dist",//打包后的文件存放的地方
-    filename: "bundle-[name].js"//打包后输出文件的文件名
+    filename: "bundle-[name].js",//打包后输出文件的文件名
+    publicPath: website.publicPath//图片等资源的url前缀
   },
 	devServer:{
 	    //设置基本目录结构
@@ -50,7 +55,12 @@ module.exports = {
                        name:'[name].[ext]'
                    }
                }]
-            }
+            },
+            //html(内容里面有图片img)文件的打包
+            {
+	　　　　　　test: /\.(html|htm)$/,
+	　　　　　　loader: 'html-withimg-loader'
+	　　　　 }
         ]
 	},
 	plugins:[

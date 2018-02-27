@@ -77,3 +77,5 @@ plugin是webpack的另外一个概念，如果说loader是模块加载器的话�
 - 思考webpack工作方式，webpack.config.js的配置，自己动手打包一个js文件 20180224
 - 学会模仿使用loader，打包css文件 20180226(不需要死记硬背，因为以后使用基本一样，保存起来，以后使用copy过来即可)
 - 学会使用plugin,抽离css文件 20180227(以后我们使用webpack，就是去网上找各种loader和plugin)
+- 学会处理css中的图片路径，url-loader,css-loader 20180228
+- (选学)**html-withimg-loader**,这是一个HTML加载loader，顺便可以正确处理里面的图片地址，用的不多，有兴趣就看下~~
