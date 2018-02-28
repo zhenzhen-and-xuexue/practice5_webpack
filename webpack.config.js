@@ -9,8 +9,9 @@ module.exports = {
   entry:  {
   	// entry: __dirname + "/src/main.js",//第一节，打包简单js的入口文件
   	// entry2: __dirname + "/src/main2.js",//第二节，打包css的入口文件
-  	entry3: __dirname + "/src/main3.js",//第三节，打包css里面的图片
-  	entry4: __dirname + "/src/main4.js"//第三节，打包css里面的图片
+  	// entry3: __dirname + "/src/main3.js",//第三节，打包css里面的图片
+  	// entry4: __dirname + "/src/main4.js"//第四节，打包html里面的图片
+  	entry5: __dirname + "/src/main5.js"//第五节，打包bootstrap
   },//已多次提及的唯一入口文件
   output: {
     path: __dirname + "/dist",//打包后的文件存放的地方
@@ -60,10 +61,19 @@ module.exports = {
             {
 	　　　　　　test: /\.(html|htm)$/,
 	　　　　　　loader: 'html-withimg-loader'
-	　　　　 }
+	　　　　 },
+			//bootstrap里面的eot,woff,ttf,svg资源
+			{ test: /\.eot(\?v=\d+\.\d+\.\d+)?$/, loader: "file-loader" },
+            { test: /\.(woff|woff2)$/, loader:"url-loader?prefix=font/&limit=5000" },
+            { test: /\.ttf(\?v=\d+\.\d+\.\d+)?$/, loader: "url-loader?limit=10000&mimetype=application/octet-stream" },
+            { test: /\.svg(\?v=\d+\.\d+\.\d+)?$/, loader: "url-loader?limit=10000&mimetype=image/svg+xml" }
         ]
 	},
 	plugins:[
-		new extractTextPlugin("styles.css")
+		new extractTextPlugin("styles.css"),
+		new webpack.ProvidePlugin({
+	        $:"jquery",
+	        jQuery: "jquery"
+	    })
 	]
 }

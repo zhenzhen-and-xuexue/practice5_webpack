@@ -61,6 +61,22 @@ plugin是webpack的另外一个概念，如果说loader是模块加载器的话�
 ![20](https://raw.githubusercontent.com/wiki/sodyxiezhen/practice3_less/63.png)<br />
 ![20](https://raw.githubusercontent.com/wiki/sodyxiezhen/practice3_less/64.png)<br />
 
+### 5.小综合，打包bootstrap进行开发
+bootstrap里面有的各种东西分别打包进来就能使用啦，没什么特别的
+- js
+- css
+- 其他资源文件，如字体等，需要处理，固定套路即可
+
+1. 安装**bootstrap** **jquery**,因为bootstrap是依赖jQuery的啦
+![20](https://raw.githubusercontent.com/wiki/sodyxiezhen/practice3_less/71.png)<br />
+2. 由于以前js，css的loader已经配置好啦，只用管svg，font等杂七杂八的资源加载loader啦
+![20](https://raw.githubusercontent.com/wiki/sodyxiezhen/practice3_less/72.png)<br />
+3. main5.js中引入，和以前一样滴，css，js
+![20](https://raw.githubusercontent.com/wiki/sodyxiezhen/practice3_less/74.png)<br />
+![20](https://raw.githubusercontent.com/wiki/sodyxiezhen/practice3_less/73.png)<br />
+4. 最后的效果肯定和以前不用webpack一样啦
+![20](https://raw.githubusercontent.com/wiki/sodyxiezhen/practice3_less/75.png)<br />
+
 ### 项目运行步骤
 1. 把仓库克隆到本地<br />
 	git clone https://github.com/zhenzhen-and-xuexue/practice5_webpack.git
@@ -79,3 +95,4 @@ plugin是webpack的另外一个概念，如果说loader是模块加载器的话�
 - 学会使用plugin,抽离css文件 20180227(以后我们使用webpack，就是去网上找各种loader和plugin)
 - 学会处理css中的图片路径，url-loader,css-loader 20180228
 - (选学)**html-withimg-loader**,这是一个HTML加载loader，顺便可以正确处理里面的图片地址，用的不多，有兴趣就看下~~
+- 学会打包bootstrap,欢迎进入工业时代~~

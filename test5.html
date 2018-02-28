@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>5.打包bootstrap</title>
+	<link rel="stylesheet" type="text/css" href="dist/styles.css">
+</head>
+<body>
+	<div class="jumbotron">
+		<div class="container">
+			<h1>你好薛薛~</h1>
+			  <p>webpack + bootstrap轻松使用</p>
+			  <p><a class="btn btn-primary btn-lg" href="#" role="button" id="alertButton">点击我 <i class="glyphicon glyphicon-heart"></i></a></p>
+		</div>
+	</div>
+	<!-- 下面是模态框，理解为layer.js -->
+	<div class="modal fade" tabindex="-1" role="dialog" id="myModal">
+	  <div class="modal-dialog" role="document">
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+	        <h4 class="modal-title">To 薛薛</h4>
+	      </div>
+	      <div class="modal-body">
+	        <p></p>
+	      </div>
+	      <div class="modal-footer">
+	        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+	        <button type="button" class="btn btn-primary">Save changes</button>
+	      </div>
+	    </div><!-- /.modal-content -->
+	  </div><!-- /.modal-dialog -->
+	</div><!-- /.modal -->
+</body>
+<script type="text/javascript" src="dist/bundle-entry5.js"></script>
+</html>
