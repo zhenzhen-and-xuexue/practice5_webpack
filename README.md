@@ -77,6 +77,21 @@ bootstrap里面有的各种东西分别打包进来就能使用啦，没什么�
 4. 最后的效果肯定和以前不用webpack一样啦
 ![20](https://raw.githubusercontent.com/wiki/sodyxiezhen/practice3_less/75.png)<br />
 
+### 6.结合vue
+终于到了重头戏，webpack+vue的结合啦
+1. 安装 **vue**<br />
+	```
+		npm install vue --save
+	```
+2. 配置webpack.config.js,需要注意的是要配置一个 resolve,alias~
+	![20](https://raw.githubusercontent.com/wiki/sodyxiezhen/practice3_less/81.png)<br />
+3. 按照vue的语法去写就行啦
+	![20](https://raw.githubusercontent.com/wiki/sodyxiezhen/practice3_less/82.png)<br />
+	![20](https://raw.githubusercontent.com/wiki/sodyxiezhen/practice3_less/83.png)<br />
+4. 可以看到轻松运行起来啦
+	![20](https://raw.githubusercontent.com/wiki/sodyxiezhen/practice3_less/84.png)<br />
+5. 对于vue的语法是不是忘啦？哈哈哈没关系我也忘了，一起捡起来就好啦，[jspang的传送门](http://jspang.com/2018/01/21/vue-timeline/)
+
 ### 项目运行步骤
 1. 把仓库克隆到本地<br />
 	git clone https://github.com/zhenzhen-and-xuexue/practice5_webpack.git
@@ -96,3 +111,4 @@ bootstrap里面有的各种东西分别打包进来就能使用啦，没什么�
 - 学会处理css中的图片路径，url-loader,css-loader 20180228
 - (选学)**html-withimg-loader**,这是一个HTML加载loader，顺便可以正确处理里面的图片地址，用的不多，有兴趣就看下~~
 - 学会打包bootstrap,欢迎进入工业时代~~
+- 复习vue,随便写一个webpack打包vue的例子~~20180301

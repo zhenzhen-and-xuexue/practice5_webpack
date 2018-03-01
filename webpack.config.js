@@ -10,8 +10,9 @@ module.exports = {
   	// entry: __dirname + "/src/main.js",//第一节，打包简单js的入口文件
   	// entry2: __dirname + "/src/main2.js",//第二节，打包css的入口文件
   	// entry3: __dirname + "/src/main3.js",//第三节，打包css里面的图片
-  	// entry4: __dirname + "/src/main4.js"//第四节，打包html里面的图片
-  	entry5: __dirname + "/src/main5.js"//第五节，打包bootstrap
+  	// entry4: __dirname + "/src/main4.js",//第四节，打包html里面的图片
+  	// entry5: __dirname + "/src/main5.js",//第五节，打包bootstrap
+  	entry6: __dirname + "/src/main6.js"//第五节，打包bootstrap
   },//已多次提及的唯一入口文件
   output: {
     path: __dirname + "/dist",//打包后的文件存放的地方
@@ -66,7 +67,11 @@ module.exports = {
 			{ test: /\.eot(\?v=\d+\.\d+\.\d+)?$/, loader: "file-loader" },
             { test: /\.(woff|woff2)$/, loader:"url-loader?prefix=font/&limit=5000" },
             { test: /\.ttf(\?v=\d+\.\d+\.\d+)?$/, loader: "url-loader?limit=10000&mimetype=application/octet-stream" },
-            { test: /\.svg(\?v=\d+\.\d+\.\d+)?$/, loader: "url-loader?limit=10000&mimetype=image/svg+xml" }
+            { test: /\.svg(\?v=\d+\.\d+\.\d+)?$/, loader: "url-loader?limit=10000&mimetype=image/svg+xml" },
+            {
+		        test: /\.vue$/,
+		        loader: 'vue-loader',
+		    },
         ]
 	},
 	plugins:[
@@ -75,5 +80,12 @@ module.exports = {
 	        $:"jquery",
 	        jQuery: "jquery"
 	    })
-	]
+	],
+	resolve: {
+    alias: {
+    	//这里需要这么写才能正确打包vue
+      'vue$': 'vue/dist/vue.esm.js',
+      '@': path.resolve(__dirname, 'src'),
+    }
+  },
 }
