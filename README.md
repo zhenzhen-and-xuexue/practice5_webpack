@@ -92,6 +92,14 @@ bootstrap里面有的各种东西分别打包进来就能使用啦，没什么�
 	![20](https://raw.githubusercontent.com/wiki/sodyxiezhen/practice3_less/84.png)<br />
 5. 对于vue的语法是不是忘啦？哈哈哈没关系我也忘了，一起捡起来就好啦，[jspang的传送门](http://jspang.com/2018/01/21/vue-timeline/)
 
+### 7. 组件
+vue复习完基础模板语法之后的另外一个重点就是组件啦。顾名思义，组件就是一部分的意思，比如整个页面可以被分为头部组件，身体组件，尾部组件...这样就可以方便开发维护啦。(Vue的组件绝对是重点，并且它改变了我们对前端页面开发的思维习惯)
+1. 先定义组件，然后像拼积木一样拼起来，如下<br />
+	![20](https://raw.githubusercontent.com/wiki/sodyxiezhen/practice3_less/91.png)<br />
+2. 这节不需要任何其他的loader，直接构建运行起来就好<br />
+	![20](https://raw.githubusercontent.com/wiki/sodyxiezhen/practice3_less/92.png)<br />
+看，很神奇吧^_^注意，图中这种把所以组件全部写在一个文件中的做法明显是不合理的，这里只是为了方便演示效果~下堂课我们会用到单文件组件的威力~~这才是Vue 组件正确的打开方式哦~~
+
 ### 项目运行步骤
 1. 把仓库克隆到本地<br />
 	git clone https://github.com/zhenzhen-and-xuexue/practice5_webpack.git
@@ -112,3 +120,4 @@ bootstrap里面有的各种东西分别打包进来就能使用啦，没什么�
 - (选学)**html-withimg-loader**,这是一个HTML加载loader，顺便可以正确处理里面的图片地址，用的不多，有兴趣就看下~~
 - 学会打包bootstrap,欢迎进入工业时代~~
 - 复习vue,随便写一个webpack打包vue的例子~~20180301
+- 跟着技术胖学习组件的基本知识，想想这样写和我们以前写页面的思维区别~~20180302
